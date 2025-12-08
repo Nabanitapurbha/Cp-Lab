@@ -1,0 +1,22 @@
+Write a program to input two student's names and percentages and print the name of the student with the higher percentage. In case they score equal percentages, print 'equal'
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string name1, name2;
+    float perc1, perc2;
+    
+    cin >> name1 >> perc1;
+    cin >> name2 >> perc2;
+
+    if(perc1 > perc2)
+        cout << name1;
+    else if(perc2 > perc1)
+        cout << name2;
+    else
+        cout << "equal";
+
+    return 0;
+}
