@@ -1,0 +1,18 @@
+Write a program that takes three space separated numbers as input.Prints "Increasing" if the numbers are in strictly increasing order,Decreasing" if they are in strictly decreasing order,and "Neither" otherwise.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cin >> a >> b >> c;
+
+    if(a < b && b < c)
+        cout << "Increasing";
+    else if(a > b && b > c)
+        cout << "Decreasing";
+    else
+        cout << "Neither";
+
+    return 0;
+}
