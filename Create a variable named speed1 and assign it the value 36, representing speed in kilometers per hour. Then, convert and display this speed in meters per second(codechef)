@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float speed1 = 36;
+    float speed_mps = speed1 / 3.6;
+    cout << "Speed in m/s = " << speed_mps << endl;
+    return 0;
+}
