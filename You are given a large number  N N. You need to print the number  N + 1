@@ -1,0 +1,25 @@
+//You are given a large number N. You need to print the number N+1.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string N;
+    cin >> N;
+
+    int carry = 1; 
+    for(int i = N.size() - 1; i >= 0; i--) {
+        int digit = N[i] - '0' + carry;
+        N[i] = (digit % 10) + '0';
+        carry = digit / 10;
+        if(carry == 0) break;
+    }
+
+    if(carry == 1) {
+        N = "1" + N;
+    }
+
+    cout << N;
+    return 0;
+}
