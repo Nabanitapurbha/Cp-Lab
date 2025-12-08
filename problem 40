@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    float speed1 = 36;           
+    float speed_mps;
+
+    speed_mps = speed1 / 3.6;   
+
+    printf("Speed in m/s = %.2f\n", speed_mps);
+
+    return 0;
+}
