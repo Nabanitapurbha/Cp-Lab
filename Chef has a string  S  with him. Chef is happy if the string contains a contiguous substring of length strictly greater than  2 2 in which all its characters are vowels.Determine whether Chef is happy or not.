@@ -1,0 +1,36 @@
+//Chef has a string S with him. Chef is happy if the string contains a contiguous substring of length strictly greater than 2 in which all its characters are vowels.Determine whether Chef is happy or not.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool isVowel(char c) {
+    return (c=='a' || c=='e' || c=='i' || c=='o' || c=='u');
+}
+
+int main() {
+    string S;
+    cin >> S;
+
+    int count = 0;
+    bool happy = false;
+
+    for(int i = 0; i < S.length(); i++) {
+        if(isVowel(S[i])) {
+            count++;
+            if(count > 2) { 
+                happy = true;
+                break;
+            }
+        } else {
+            count = 0;
+        }
+    }
+
+    if(happy)
+        cout << "Happy";
+    else
+        cout << "Sad";
+
+    return 0;
+}
