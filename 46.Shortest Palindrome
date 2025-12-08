@@ -1,0 +1,28 @@
+You are given a string S consisting of lowercase English letters. You can convert S into a palindrome by adding characters only at the beginning of the string.Your task is to find the shortest palindrome that can be obtained using this trans.formation
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isPal(string &s){
+    int l=0,r=s.size()-1;
+    while(l<r){
+        if(s[l]!=s[r]) return false;
+        l++; r--;
+    }
+    return true;
+}
+
+int main(){
+    string S;
+    cin >> S;
+    string t = S;
+    int n = S.size();
+
+    while(!isPal(t)){
+        t = S[n-1] + t;
+        n--;
+    }
+
+    cout << t;
+    return 0;
+}
