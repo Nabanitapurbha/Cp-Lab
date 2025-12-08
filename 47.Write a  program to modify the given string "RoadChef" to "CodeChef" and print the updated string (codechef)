@@ -1,0 +1,28 @@
+//Write a  program to modify the given string "RoadChef" to "CodeChef" and print the updated string (codechef)
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isPal(string &s){
+    int l=0,r=s.size()-1;
+    while(l<r){
+        if(s[l]!=s[r]) return false;
+        l++; r--;
+    }
+    return true;
+}
+
+int main(){
+    string S;
+    cin >> S;
+    string t = S;
+    int n = S.size();
+
+    while(!isPal(t)){
+        t = S[n-1] + t;
+        n--;
+    }
+
+    cout << t;
+    return 0;
+}
