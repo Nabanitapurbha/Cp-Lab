@@ -1,0 +1,26 @@
+//Given two strings, your task is to check if they are anagrams of each other. Two strings are considered anagrams if by rearranging the letters of one string, we can get the other string. Your program should be able to read two strings from the input and output "YES" if they are anagrams of each other, and "NO" otherwise.
+
+#include <iostream>
+#include <algorithm>
+#include <string>
+using namespace std;
+
+int main() {
+    string s1, s2;
+    cin >> s1 >> s2;
+
+    if(s1.length() != s2.length()) {
+        cout << "NO";
+        return 0;
+    }
+
+    sort(s1.begin(), s1.end());
+    sort(s2.begin(), s2.end());
+
+    if(s1 == s2)
+        cout << "YES";
+    else
+        cout << "NO";
+
+    return 0;
+}
